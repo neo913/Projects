@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+Assignment 3 html
+assign3.html
+Insu Yun 017-747-148
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title> Assignment 3 </title>
+	<link rel="stylesheet" href="a3.css" type="text/css"/>
+	<script src="a3.js" type="text/javascript"></script>
+</head>
+<body class="times">
+<header>
+<a href="../index.html">Go to Main INT222 HomePage</a>
+</header>
+
+<div class="main" id="main">
+
+<!--Title-->
+	<div class="title" id="title">
+		<ul>
+			<li><p id="logo"><img src="seneca_logo.png" title="Seneca logo" alt="Seneca logo" width="250"/></p></li>
+			<li><p class="co">Coop Program Application Form</p></li>
+			<li><p>Required fields are followed by <span class="star">*</span></p></li>
+		</ul>
+	</div>
+<!-- title End-->
+
+	<form class="tttt" method="post" name="coop_app" action="http://formpost.azurewebsites.net/home/test" onsubmit="return check();" >
+<!--Basic Information-->
+	<div class="a3form" id="a3form">
+		<p class="formtitle">Basic Informaion</p>
+		<div class="a3input">
+			<p><label for="first_Name">First Name: </label><input class="tInput" type="text" name="First_Name" id="first_Name" onchange="fNameCheck();" title="Alphabetic characters, ', and - available" autofocus required /> <span class="star">*</span></p>
+			<p class="errmsg" id="fnameErr"></p>
+			<p><label for="last_Name">Last Name: </label><input class="tInput" type="text" name="Last_Name" id="last_Name" onchange="lNameCheck();" title="Alphabetic characters, ', and - available" required /> <span class="star">*</span></p>
+			<p class="errmsg" id="lnameErr"></p>
+			<p><label for="student_ID">Student ID: </label><input class="tInput" type="text" name="Student_ID" id="student_ID" onchange="student_IDCheck();" required title="10 digits only"/> <span class="star">*</span></p>
+			<p class="errmsg" id="student_IDErr"></p>
+			<p><label for="learn_ID">Learn ID: </label><input class="tInput" type="text" name="Learn_ID" id="learn_ID" required onchange="learn_IDCheck();" title="The first character should be same as the first character of the field 'First Name' and the following characters should be the same as 'Last Name'"/> <span class="star">*</span></p>
+			<p class="errmsg" id="learn_IDErr"></p>
+			<p><label for="seneca_Email">Seneca Email: </label><input class="tInput" type="email" name="Seneca_Email" id="seneca_Email" readonly value="@myseneca.ca"/>&nbsp;&nbsp;&nbsp;</p>
+			<p class="errmsg" id="seneca_EmailErr"></p>
+			<p><label for="phone_Number">Phone Number: </label><input class="tInput" type="tel" name="Phone_Number" id="phone_Number" onchange="phone_NumberCheck();" placeholder="(999) 999-9999" title="Must be format of (999) 999-9999 (9 here means digit only) and cannot be all zeros" required/> <span class="star">*</span></p>
+			<p class="errmsg" id="phone_NumberErr"></p>
+			<p><label for="address">Address: </label><input class="tInput" type="text" name="Address" id="address" title="You need to fill this" required /> <span class="star">*</span></p>
+			<p class="errmsg" id="addressErr"></p>
+			<p><label for="city">City: </label><input class="tInput" type="text" name="City" id="city" title="You need to fill this" required /> <span class="star">*</span></p>
+			<p class="errmsg" id="cityErr"></p>
+			<p><label for="province"><span class="ver">Province:</span></label>
+			<select multiple name="Province" id="province" required title="You must select one of options">
+				<optgroup label="Province">
+				<option class="test" value="AB">Alberta</option>
+				<option value="BC">British</option>
+				<option value="MB">Manitoba</option>
+				<option value="NB">New Brunswick</option>
+				<option value="NL">Newfoundland and Labrador</option>
+				<option value="NS">Nova Scotia</option>
+				<option value="ON">Ontario</option>
+				<option value="PE">Prince Edward Island</option>
+				<option value="QC">Quebec</option>
+				<option value="SK">Saskatchewan</option>
+				</optgroup>
+				<optgroup label="Territories">
+				<option value="NT">Northwest Territories</option>
+				<option value="NU">Nunavut</option>
+				<option value="YT">Yukon</option>
+				</optgroup>
+			</select> <span class="star">*</span></p>
+			<p class="errmsg" id="province_Err"></p>
+		</div><br/>
+	</div>
+
+<!--Basic Information End-->
+
+
+
+<!--Education-->
+	<div class="a3subform">
+		<p class="formtitle">Education</p>
+		<div class="a3input" id="a3eduForm">
+			<p><label for="school">School: </label><input class="tInput" type="text" name="School" id="school" title="You need to fill this" required /> <span class="star">*</span></p>
+			<p class="errmsg" id="schoolErr"></p>
+			<p><label for="program">Program: </label><input class="tInput" type="text" name="Program" id="program" title="You need to fill this" required /> <span class="star">*</span></p>
+			<p class="errmsg" id="programErr"></p>
+			<p><label for="education_Level">Education Level: </label><input class="tInput" list="edu_Level" id="education_Level" name="Education_Level" />&nbsp;&nbsp;&nbsp;</p>
+				<datalist id="edu_Level">
+					<option value="Technical Diploma">
+					<option value="College Diploma">
+					<option value="Bachelor's Degree">
+					<option value="Master's Degree">
+					<option value="Others">
+				</datalist>
+			<p class="errmsg" id="education_LevelError"></p>
+			<fieldset>
+			<legend>Education Status</legend>
+			<ul>
+				<li><input class="radioType" type="radio" name="Education_Status" id="graduated" value="graduated"/><label for="graduated">Graduated</label></li>
+				<li><input class="radioType" type="radio" name="Education_Status" id="curentEnRolled" value="currentEnRoll"/><label for="curentEnRolled">Current Enrolled</label></li>
+				<li><input class="radioType" type="radio" name="Education_Status" id="didnotGraduate" value="didnotGraduate"/><label for="didnotGraduate">Did Not Graduate</label></li>
+			</ul>
+			</fieldset>
+			<p class="errmsg" id="education_StatusErr"></p>
+			<p><label for="graduate_Date">Graduation Date: </label><input class="tInput" type="text" name="Graduation_Date" id="graduate_Date" onchange="graduate_DateCheck();" title="mmmyyyy (mmm = Month abbreviation, yyyy = Years(digits only)"/>&nbsp;&nbsp;&nbsp;</p>
+			<p class="errmsg" id="graduate_DateErr"></p>
+		</div><br/>
+	<p class="a3input" id="addEdu"></p>
+	<p><button type="button" onclick="toggleEdu();">+</button>Add Education</p>
+
+	</div>
+
+<!--Education End-->
+
+
+
+<!--Work Experience-->
+	<div class="a3subform">
+		<p class="formtitle">Work Experience</p>
+		<div class="a3input" id="a3workForm">
+			<p><label for="employer">Employer: </label><input class="tInput" type="text" id="employer" name="Employer" /></p>
+			<p class="errmsg" id="employerErr"></p>
+			<p><label for="job_Title">Job Title: </label><input class="tInput" type="text" id="job_Title" name="Job_Title" /></p>
+			<p class="errmsg" id="job_TitleErr"></p>
+			<p><label for="job_Duty">Job Duty: </label><textarea name="Job_Duty" id="job_Duty" ></textarea></p>
+			<p class="errmsg" id="job_DutyErr"></p>
+			<p><label for="worked_Year">Worked Year: </label><input class="tInput" type="number" name="Worked_Year" id="worked_Year" /></p>
+			<p class="errmsg" id="worked_YearErr"></p>
+		</div><br/>
+	<p class="a3input" id="addWork"></p>
+	<p><button type="button" onclick="toggleWork();">+</button>Add Work Experience</p>
+	</div>
+<!--Work Experience End-->
+
+<!--Attachments-->
+	<div class="a3subform">
+		<p class="formtitle">Attachment</p>
+		<div class="a3input" id="a3attachForm">
+			<p><label for="attachment">Attachments: </label><input class="file" type="file" name="Attachment" id="attachment" /></p>
+			<p class="errmsg" id="attachmentErr"></p>
+		</div><br/>
+	<p class="a3input" id="addAttach"></p>
+	<p><button type="button" onclick="toggleAttach();">+</button>Add Attachments</p>
+	</div>
+
+	<div style="text-align:center;">
+		<p>
+			<input type="submit" value="Apply"/>
+			<input type="reset" value="Reset"/>
+		</p>
+
+	</div>
+<!--Attachments End-->
+
+	</form>
+
+</div>
+
+<footer>
+	<div class="a3footer">
+		<script type='text/javascript'>
+			dt=new Date(document.lastModified);
+			document.write("<mark> This page was last modified on " + dt.toLocaleString() + "</mark>")
+		</script>
+	</div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+7 10 20
+10 3 0 0 c Carrots
+10 3 4 0 b Basil
+10 1 19 0 w White Roses
+10 1 9 0 w White Roses
+1 10 9 0 w White Roses
+1 10 9 9 w White Roses
+6 7 11 2 r Red Roses

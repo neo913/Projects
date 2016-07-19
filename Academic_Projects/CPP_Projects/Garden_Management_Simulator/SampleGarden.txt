@@ -1,0 +1,11 @@
+10 20 30
+20 2 0 0 l Lettuce
+20 2 3 0 c Carrots
+20 1 6 0 p Peppers
+20 3 8 0 t Tomatoes
+10 10 12 0 R Rhubarb
+9 5 12 11 C Cabbage
+9 3 19 11 b Basil
+8 7 23 0 r Rosemary
+6 7 23 9 T Thyme
+4 7 23 16 s Squash

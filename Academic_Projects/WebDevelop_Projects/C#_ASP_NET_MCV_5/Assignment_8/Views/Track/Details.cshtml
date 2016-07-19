@@ -1,0 +1,77 @@
+﻿@model Assignment_8.Controllers.TrackWithDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details for track @Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.ClipUpload)
+        </dt>
+
+        <dd>
+            <audio src="/clip/@Model.Id" controls="controls"></audio>
+        </dd>
+
+        <dt>
+            @{
+                string comma = "(comma-separated)";
+            }
+            @Html.DisplayNameFor(model => model.Composers) @comma
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Composers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clerk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clerk)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlbumNames)
+        </dt>
+
+        <dd>
+            @foreach (var item in Model.AlbumNames)
+            {
+                string a = "["; string b = "] ";
+                @a;
+                @Html.DisplayFor(modelItem => item)
+                @b;
+            }
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

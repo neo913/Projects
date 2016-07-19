@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Assigment 8 INT 422</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @{
+        var userAccount = new Assignment_8.Controllers.UserAccount(User as System.Security.Claims.ClaimsPrincipal);
+    }
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Assignment8", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+                    @using System.Security.Claims;
+                    @if ((User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Admin") ||
+                        (User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Clerk") ||
+                        (User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Coordinator") ||
+                        (User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Executive") ||
+                        (User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Marketing") ||
+                        (User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Finance") ||
+                        (User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Staff")
+                        )
+                    {
+                    <li>@Html.ActionLink("Artist", "Index", "Artist")</li>
+                    <li>@Html.ActionLink("Album", "Index", "Album")</li>
+                    <li>@Html.ActionLink("Track", "Index", "Track")</li>
+
+                    
+                        @*
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage data <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Load Data", "Load", "Data")</li>
+                                <li>@Html.ActionLink("Remove Data", "Remove", "Data")</li>
+                            </ul>
+                        </li>
+                        *@
+                    }
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Chim Wha Roberto Leon Tong</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

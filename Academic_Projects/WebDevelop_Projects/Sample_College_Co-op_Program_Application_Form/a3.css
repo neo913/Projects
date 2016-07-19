@@ -1,0 +1,130 @@
+/*
+Assignment 3 css
+a3.css
+Insu Yun 017-747-148
+*/
+.times{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+}
+header{
+	height: 100px;
+	text-align:center;
+}
+li{
+	list-style:none;
+}
+.a3footer{
+	position:relative;
+	background-color:white;
+	margin-left:-200px;
+	margin-right:auto;
+	left:50%;
+	top:9px;
+	clear: both;
+	text-align: center;
+	font-size: 15px;
+	width: 400px;
+	border-style:outset;
+	border-width:1px;
+	border-color: #D8D8D8;
+	border-radius: 5px;
+	padding: 5px 30px;
+}
+.main{
+	position:relative;
+	background-color:white;
+	right:20%;
+	left:20%;
+	clear: both;
+	width: 60%;
+	border-style:outset;
+	border-width:1px;
+	border-color: #D8D8D8;
+	padding: 5px 30px;
+}
+.main{
+	background-color:white;
+	width:60%;
+	float:left;
+	border-style: outset;
+	border-color:#D8D8D8;
+	border-width: 1px;
+	border-radius: 10px;
+}
+.co{
+	font-size: 30px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px gray;
+}
+.star{
+	color: red;
+	border-bottom:dotted red 1px;
+}
+.a3form{
+	background-color:#F2F2F2;
+}
+.a3subform{
+	background-color:#F2F2F2;
+}
+.formtitle{
+	background-color:#BDBDBD;
+	font-weight: bold;
+	text-indent: 12px;
+}
+.a3input{
+	text-align:right;
+	margin-right:25%;
+}
+.tInput{
+	width:50%;
+	border-style: outset;
+	border-color:#D8D8D8;
+	border-width: 1px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px gray;
+}
+textarea{
+	width:50%;
+	border-style: outset;
+	border-color:#D8D8D8;
+	border-width: 1px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px gray;
+}	
+select{
+	width:50%;
+	border-style: outset;
+	border-color:#D8D8D8;
+	border-width: 1px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px gray;
+	font-size: 16px;
+}
+fieldset{
+	margin-left:auto;
+	margin-right:0%;
+	width:50%;
+	box-shadow: 3px 3px 3px gray;
+	border-width: 1px;
+	text-align:left;
+	background-color:white;
+	border-radius: 5px;
+}
+.radioType{
+	box-shadow:2px 2px 2px gray;
+}
+.file{	
+	width:50%;
+}
+.ver{
+	position:relative;
+	top:-35px;
+}
+.errmsg{
+	color:red;
+	font-size: 14px;
+}
+hr{
+	margin-right: -33%;
+}

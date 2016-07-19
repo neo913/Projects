@@ -1,0 +1,40 @@
+001;Halifax, NS;$0.00
+007;Truro, NS;$101.73
+014;Moncton, NB;$285.48
+018;Miramichi,NB;$469.23
+026;Mont-Joli,QC;$584.63
+033;Quebec, QC;$700.03
+037;Montreal, QC;$829.10
+043;Ottawa, ON;$1012.85
+049;Kingston, ON;$1182.93
+055;Toronto, ON;$1339.34
+059;Parry Sound, ON;$1482.08
+066;Sudbury Jct., ON;$1652.16
+074;Capreol, ON;$1753.89
+078;McKee's Camp, ON;$1896.63
+086;Felix, ON;$2025.70
+091;Ruel, ON;$2154.77
+097;Westree, ON;$2297.51
+103;Foleyet, ON;$2481.26
+107;Gogama, ON;$2651.34
+115;Hornepayne, ON;$2766.74
+123;Mud River, ON;$2923.15
+129;Allanwater Bridge, ON;$3024.88
+136;Savant Lake,ON;$3126.61
+140;Sioux Lookout, ON;$3296.69
+147;Red Lake Road, ON;$3453.10
+155;Redditt, ON;$3582.17
+160;Winnipeg, MB;$3752.25
+167;Portage la Prairie, MB;$3867.65
+174;Melville, SK;$4010.39
+182;Saskatoon, SK;$4112.12
+186;Unity, SK;$4213.85
+192;Viking, AB;$4315.58
+200;Edmonton, AB;$4458.32
+205;Jasper, AB;$4573.72
+211;clearwater, BC;$4675.45
+218;Kamloops, BC;$4818.19
+225;Ashcroft, BC;$5001.94
+229;Chilliwack, BC;$5185.69
+233;Abbotsford, BC;$5301.09
+240;Vancouver, BC;$5471.17

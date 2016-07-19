@@ -1,0 +1,73 @@
+﻿@model Assignment_8.Controllers.ArtistWithDetails
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete - @Html.DisplayFor(model => model.Name)</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthOrStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthOrStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlArtist)
+        </dt>
+
+        <dd>
+            <img src="@Html.DisplayTextFor(model => model.UrlArtist)" alt="" height="70" width="100" /><br />
+            @Html.DisplayFor(model => model.UrlArtist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlbumsCount)
+        </dt>
+
+        <dd>
+            <span class="badge">@Html.DisplayFor(model => model.AlbumsCount)</span>
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

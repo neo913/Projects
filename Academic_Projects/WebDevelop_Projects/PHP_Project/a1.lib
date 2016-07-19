@@ -1,0 +1,84 @@
+<?php
+class DBLink{
+        private $link = null;
+        private $num_value = 0;
+        public function __construct($database_name){
+                $lines = file('topsecret');
+                $dbserver = trim($lines[0]);
+                $uid = trim($lines[1]);
+                $pw = trim($lines[2]);
+                $dbname = trim($lines[3]);
+
+                //Connect to the mysql server and get back our link_identifier
+                $link = mysqli_connect($dbserver, $uid, $pw, $dbname)
+                                        or die('Could not connect: ' . mysqli_error($link));
+                mysqli_select_db($link, $database_name) or die('Could not select database');
+                $this->link = $link;
+        }
+        public function query($sql_query){
+                $result = mysqli_query($this->link, $sql_query) or die('quert failed'. mysqli_error($this->link));
+                return $result;
+        }
+        public function __destruct(){
+                mysqli_close($this->link);
+        }
+        public function set($data){
+                $this->num_value = $data;
+                echo $data;
+                }
+        public function emptyResult(){
+                if(!$this->num_value)
+                        return true;
+                else
+                        return false;
+        }
+}
+?>
+<?php
+class Menu{
+        private $linkTitle = null;
+        private $linkName = array();
+        private $numofLink = 0;
+        public function __construct($linkList){
+                $this->linkTitle = $linkList;
+                if(in_array("Add", $linkList)){
+                        array_push($this->linkName, "add.php");
+                }
+                if(in_array("View All", $linkList)){
+                        array_push($this->linkName, "view.php");
+                }
+                if(in_array("Search",$linkList)){
+						array_push($this->linkName, true);
+				}
+                if(in_array("login", $linkList)){
+                        array_push($this->linkName, true);
+                }
+				$this->numofLink = count($this->linkName);
+        }
+        public function search($target){
+                $_SESSION['searchhistory'] = $target;
+        }
+        public function displayMenu(){
+			if(isset($_POST['search']))
+				$this->search($_POST['search']);
+			
+?>
+<form method="post" action="">
+<div class="emptydiv"><br /></div>
+<div class="box">
+<nav>
+<ul>
+<li class="menu"><a href="<?php echo $this->linkName[0] ?>"><?php echo $this->linkTitle[0]?></a></li>
+<li class="menu"><a href="<?php echo $this->linkName[1] ?>"><?php echo $this->linkTitle[1]?></a></li>
+<li class="search">Search in description : <input type="text" name="search" value="<?php echo $_SESSION['searchhistory'] ?>" /> 
+<input type="submit" name="searchbutton" value = "Search" /> </li> 
+<li class="search">&nbsp; User : <?php echo $_SESSION['UserName'] ?>  Role: <?php echo $_SESSION['Role'] ?> </li>
+<li><a href='logout.php'>logout</a></li>
+</ul>
+</nav>
+</div>
+</ form>
+<?php
+        }
+}
+?>
