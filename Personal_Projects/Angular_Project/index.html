@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+	<title>Mug Shop</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="app.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+</head>
+
+<body ng-controller="StoreController as store">
+<div class="big-cont">
+	<div class="empty-cont"></div>
+	<!-- Title div -->
+	<div class="title-cont">
+		<div class="title-cont-inner">
+			<h1 style="color:gray;">Welcome to the <b style="color:white;">Mug Shop!</b></h1>
+		</div>
+	</div>
+
+	<!-- Content div -->
+	<div class="content-cont">
+		<div class="list-group">
+			<div class="list-group-item" ng-repeat="product in store.products">
+
+				<!-- Title div -->
+				<product-title></product-title>
+
+				<!-- Gallery div -->
+				<product-gallery></product-gallery>
+
+				<!-- Menu div -->
+				<product-menus></product-menus>
+
+				<div class="empty-cont"></div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
