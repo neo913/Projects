@@ -1,0 +1,495 @@
+﻿@{
+    ViewBag.Title = "Projects";
+}
+<div>
+    <header>
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="../" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="../Content/Images/logo_text.png" style="width: 80px;" />
+                    </a>
+                    <ul class="dropdown-content fix3">
+                        <li class="dropdown">
+                            <a href="../">
+                                <img src="../Content/Images/home.png" style="width:80px;">
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="../../Portfolio">
+                                <img src="../Content/Images/about.png" style="width:80px;">
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="../../Portfolio/Work">
+                                <img src="../Content/Images/work.png" style="width:80px;">
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="setH" data-toggle="modal" data-target="#contact-modal">
+                                <img src="../Content/Images/contact.png" style="width:80px;">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal fade contact-cont" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Contact Modal -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title contact-title"> Contact Me!</h2>
+                </div>
+
+                <div class="modal-body pad-helper">
+                    <form id="contactForm" action="MAILTO:nedinsuyun@gmail.com" method="post" enctype="text/plain">
+                        <div class="col-md-12">
+                            <div class="form-group col-md-5">
+                                <label class="control-label col-md-3">Name: </label>
+                                <div class="col-md-9">
+                                    <input class="form-control col-md-8" type="text" name="name" placeholder="Your name">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-7">
+                                <label class="control-label col-md-3">Email: </label>
+                                <div class="col-md-9">
+                                    <input class="form-control col-md-9" type="text" name="email" placeholder="Your email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label class="control-label col-md-4">Content: </label>
+                            <div class="col-md-12">
+                                <textarea class="form-control col-md-12 text-area" name="content"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="contact-btn col-md-12">
+                            <input class="btn btn-default social" type="submit" value="Send">
+                            <a href="https://ca.linkedin.com/in/nedinsuyun" target="_blank">
+                                <img class="social icons" src="../Content/Images/linkedin.png" alt="linkedin icon" />
+                            </a>
+                            <a href="https://facebook.com/nedinsuyun" target="_blank">
+                                <img class="social icons" src="../Content/Images/facebook.png" alt="linkedin icon" />
+                            </a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Contact Modal -->
+
+    <img class="contactBg" src="../Content/Images/slider2.jpg" alt="Background image">
+    <div class="site-inner" id="mainPage">
+
+        <div id="workMain">
+            <!-- Personal Works -->
+            <div class="work-cont">
+                <div class="innerBox work-title">
+                    <h1>Personal Works</h1>
+                </div>
+                <div class="innerBox work-md">
+                    <div class="row">
+                        <a href="#" class="setH" data-toggle="modal" data-target="#angular-modal">
+                            <div class="innerBox col-md-3 work-sm">
+                                <h4>AngularJS</h4>
+                            </div>
+                        </a>
+                        <!-- Angular Modal -->
+                        <div id="angular-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Angular Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">AngularJS projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>The Mug Store</h3><br />
+                                        <p>
+                                            The purpose of this website is managing <br />
+                                            json type data with AngularJS. <br /><br />
+
+                                            This website can be used for a online-shopping page.<br />
+                                            <a href="../Content/Images/mug_store.jpg" target="_blank">
+                                                <img class="previews" src="../Content/Images/mug_store.jpg" alt="mug store preview" />
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer" style="text-align: center;">
+                                        You can check my codes at here
+                                        <a href="https://github.com/neo913/Projects/tree/master/Personal_Projects/Angular_Project" target="_blank">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a><br />
+                                        See the result at here
+                                        <a href="../Portfolio/Store" target="_blank">
+                                            <img class="icons" src="../Content/Images/logo.png" alt="my logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Angular Modal -->
+
+                        <a href="#" class="setH" data-toggle="modal" data-target="#bank-modal">
+                            <div class="innerBox col-md-3 work-sm ">
+                                <h4>Bank System</h4>
+                            </div>
+                        </a>
+                        <!-- Bank Modal -->
+                        <div id="bank-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Bank Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">Bank projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Bank System</h3><br />
+                                        <p>
+                                            The purpose of this project is handling<br />
+                                            the application and database with C#/ASP.NET MVC5<br /><br />
+
+                                            This Program can manage Customer, Cards, Accounts, and Records<br />
+                                            by proper authentication(Admin, Manager, Teller, and Client).<br />
+                                            All the functions are developed to focuse on<br />
+                                            the real-life bank procedures.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        You can check my codes at here(Will be updated soon...)
+                                        <a href="#">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a><br />
+                                        See the result at here
+                                        <a href="#">
+                                            <img class="icons" src="../Content/Images/logo.png" alt="my logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Bank Modal -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <!-- Academic Works -->
+            <div class="work-cont">
+                <div class="innerBox work-title">
+                    <h1>Academic Works</h1>
+                </div>
+                <div class="innerBox work-md">
+                    <div class="row">
+                        <a href="#" class="setH" data-toggle="modal" data-target="#c-modal">
+                            <div class="innerBox col-md-3 work-sm">
+                                <h4>C</h4>
+                            </div>
+                        </a>
+
+                        <!-- C Modal -->
+                        <div id="c-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- C Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">C projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Statistic Analysis Software</h3><br />
+                                        <p>
+                                            This was the final project of C programming class.<br />
+                                            I designed a simple C program which analyzes statistics of train travelers.<br />
+                                            <br />
+                                            This program imports data from text files (locations.txt, passenger.txt),<br /> and then analyzes the data.<br />
+                                            And finally it exports the data of passengers and locations into detailed.txt file.<br />
+                                            Current detailed.txt file is the result of this program.<br />
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        You can check my codes at here
+                                        <a href="https://github.com/neo913/Projects/tree/master/Academic_Projects/C_Projects/Third_Assignment" target="_blank">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of C Modal -->
+
+                        <a href="#" class="setH" data-toggle="modal" data-target="#cpp-modal">
+                            <div class="innerBox col-md-3 work-sm">
+                                <h4>C++</h4>
+                            </div>
+                        </a>
+
+                        <!-- CPP Modal -->
+                        <div id="cpp-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- CPP Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">CPP projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>1. Garden Management Simulator</h3><br />
+                                        <p>
+                                            The purpose of this project is providing <br />
+                                            a Garden management Simulator for farmers.<br /><br />
+                                            When you run this program, you will see a menu.<br />
+                                            To check out the functions, try options on the menu.<br />
+                                            If you want to see the sample result of this program,<br />
+                                            load "SampleGarden.txt" or "file1.txt".<br />
+                                        </p>
+
+                                        <h3>2. Read and Write json file.(Data handling)</h3><br />
+                                        <p>
+                                            The purpose
+                                            This project was focused on handling json type data by CPP<br />
+                                            This program can read/write json type data by OOP style logics<br />
+                                        </p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        You can check my codes at here
+                                        <a href="https://github.com/neo913/Projects/tree/master/Academic_Projects/CPP_Projects" target="_blank">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of CPP Modal -->
+
+                        <a href="#" class="setH" data-toggle="modal" data-target="#java-modal">
+                            <div class="innerBox col-md-3 work-sm">
+                                <h4>Java</h4>
+                            </div>
+                        </a>
+
+                        <!-- Java Modal -->
+                        <div id="java-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Java Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">Java projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Card validation and Socket server data communication</h3><br />
+                                        <p>
+                                            This program validate the credit card numbers.<br /><br />
+                                            The program accepts input at the client side,<br />
+                                            And then, send it to the server side.<br />
+                                            The server check the validation of numbers,<br />
+                                            And then, it send the result to client to show.<br />
+                                            <a href="../Content/Images/java.jpg" target="_blank">
+                                                <img class="previews" src="../Content/Images/java.jpg" alt="java project preview" />
+                                            </a>
+                                        </p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        You can check my codes at here
+                                        <a href="https://github.com/neo913/Projects/tree/master/Academic_Projects/Java_Projects" target="_blank">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Java Modal -->
+
+                        <a href="#" class="setH" data-toggle="modal" data-target="#db2-modal">
+                            <div class="innerBox col-md-3 work-sm">
+                                <h4>DB2</h4>
+                            </div>
+                        </a>
+
+                        <!-- DB2 Modal -->
+                        <div id="db2-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- DB2 Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">DB2 projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>DB2/400</h3><br />
+                                        <p>
+                                            The purpose of this project was handling database<br />
+                                            using SQL queries on AS/400 environment as a team.<br />
+                                        </p>
+                                        <h3>Oracle SQL</h3><br />
+                                        <p>
+                                            The purpose of this project was handling database<br />
+                                            using SQL queries on Oracle SQL environment as a team.<br />
+                                        </p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        You can check my codes at here
+                                        <a href="https://github.com/neo913/Projects/tree/master/Academic_Projects/Database_Projects" target="_blank">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of DB2 Modal -->
+
+                        <a href="#" class="setH" data-toggle="modal" data-target="#asp-modal">
+                            <div class="innerBox col-md-3 work-sm">
+                                <h4>C#/ASP.NET MVC5</h4>
+                            </div>
+                        </a>
+                        <!-- ASP Modal -->
+                        <div id="asp-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- asp Modal Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">C#/ASP.NET MVC5 projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>
+                                            Music companies and industry<br />
+                                            management program/website
+                                        </h3><br />
+                                        <p>
+                                            The purpose of this project is handling<br />
+                                            the application and database with C#/ASP.NET MVC5<br /><br />
+
+                                            This Program can manage Artist, Album, Genre, and MediaType.<br />
+                                            Focused on using this application can help<br />
+                                            employees or managers in the real world.<br />
+                                            <a href="../Content/Images/asp.jpg" target="_blank">
+                                                <img class="previews" src="../Content/Images/asp.jpg" alt="C#/ASP.NET project preview" />
+                                            </a>
+                                            <a href="../Content/Images/A8cd.jpg" target="_blank">
+                                                <img class="previews" src="../Content/Images/A8cd.jpg" alt="C#/ASP.NET project preview" />
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        You can check my codes at here
+                                        <a href="https://github.com/neo913/Projects/tree/master/Academic_Projects/WebDevelop_Projects/C%23_ASP_NET_MCV_5" target="_blank">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of ASP Modal -->
+
+                        <a href="#" class="setH" data-toggle="modal" data-target="#php-modal">
+                            <div class="innerBox col-md-3 work-sm">
+                                <h4>PHP</h4>
+                            </div>
+                        </a>
+                        <!-- PHP Modal -->
+                        <div id="php-modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- PHP Content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h2 class="modal-title">PHP projects</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Grocery Storage Management Program</h3><br />
+                                        <p>
+                                            The purpose of this project is handling<br />
+                                            the data communication using PHP and MySQL<br /><br />
+
+                                            Using this program can manage the storage of <br />
+                                            a grocery store's strage status.<br />
+                                            User can manage database on the client side.<br />
+                                            <a href="../Content/Images/php.jpg" target="_blank">
+                                                <img class="previews" src="../Content/Images/php.jpg" alt="php project preview" />
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        You can check my codes at here
+                                        <a href="https://github.com/neo913/Projects/tree/master/Academic_Projects/WebDevelop_Projects/PHP_Project" target="_blank">
+                                            <img class="icons" src="../Content/Images/github-logo.png" alt="github logo">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of PHP Modal -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal fade contact-cont" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Contact Modal -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title contact-title"> Contact Me!</h2>
+                </div>
+
+                <div class="modal-body pad-helper">
+                    <form id="contactForm" action="MAILTO:nedinsuyun@gmail.com" method="post" enctype="text/plain">
+                        <div class="col-md-12">
+                            <div class="form-group col-md-5">
+                                <label class="control-label col-md-3">Name: </label>
+                                <div class="col-md-9">
+                                    <input class="form-control col-md-8" type="text" name="name" placeholder="Your name">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-7">
+                                <label class="control-label col-md-3">Email: </label>
+                                <div class="col-md-9">
+                                    <input class="form-control col-md-9" type="text" name="email" placeholder="Your email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label class="control-label col-md-4">Content: </label>
+                            <div class="col-md-12">
+                                <textarea class="form-control col-md-12 text-area" name="content"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="contact-btn col-md-12">
+                            <input class="btn btn-default social" type="submit" value="Send">
+                            <a href="https://ca.linkedin.com/in/nedinsuyun" target="_blank">
+                                <img class="social icons" src="../Content/Images/linkedin.png" alt="linkedin icon" />
+                            </a>
+                            <a href="https://facebook.com/nedinsuyun" target="_blank">
+                                <img class="social icons" src="../Content/Images/facebook.png" alt="linkedin icon" />
+                            </a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Contact Modal -->
+</div>

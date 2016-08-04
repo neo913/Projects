@@ -1,0 +1,80 @@
+﻿@model MyProject.Controllers.AccountAddForm
+
+@{
+    ViewBag.Title = "AddAccountForCustomer";
+}
+<script src=""//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
+
+<h2>Add a new Account For Customer: @Html.DisplayFor(Model => Model.Customer.FirstName) @Html.DisplayFor(Model => Model.Customer.LastName)</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.Hidden("CurrentBalance", Model.CurrentBalance)
+        @Html.Hidden("AvailableBalance", Model.AvailableBalance)
+        @Html.Hidden("OverDraftLimit", Model.OverDraftLimit)
+        @Html.Hidden("CustomerId", Model.CustomerId)
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="Type" class="form-control">
+                    <option value="Checking">Checking</option>
+                    <option value="Saving">Saving</option>
+                </select>
+                @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CurrentBalance, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.CurrentBalance, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CurrentBalance, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AvailableBalance, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.AvailableBalance, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AvailableBalance, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OverDraftLimit, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.OverDraftLimit, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.OverDraftLimit, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="Status" class="form-control">
+                    <option value="Closed">Closed</option>
+                    <option value="Open">Open</option>
+                </select>
+                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <script>CKEDITOR.replace('Profile');</script>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

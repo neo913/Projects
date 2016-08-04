@@ -1,0 +1,31 @@
+﻿@model MyProject.Controllers.CardWithDetails
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Search</h2>
+<h4>Enter card numbers or a name to search.</h4>
+<hr />
+
+@using (Html.BeginForm("Index", "Search", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6">
+            <section id="searcgForm">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.Label("Search", new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        <input class="form-control" autofocus name="str" id="str" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Submit" class="btn btn-default" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+}

@@ -1,0 +1,92 @@
+﻿@model MyProject.Controllers.AccountWithDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>@Html.DisplayFor(Model => Model.Type) Account of Customer: @Html.DisplayFor(Model => Model.Customer.FirstName) @Html.DisplayFor(Model => Model.Customer.LastName)
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OverDraftLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OverDraftLimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName) @Html.DisplayFor(model => model.Customer.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordsCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordsCount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Go to Customer List", "../Customer") | 
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("See Records", "Records", new { id = Model.Id }) | 
+    @Html.ActionLink("Account List", "Index")
+</p>

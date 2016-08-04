@@ -1,1 +1,1 @@
-This program is for grocery store with php
+This program is for grocery store with PHP and MySql

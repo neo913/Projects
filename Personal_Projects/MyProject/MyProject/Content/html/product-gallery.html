@@ -1,0 +1,24 @@
+<div class="item-gallery-cont">
+	<div>
+		<a href="../Content/{{product.images[img.img]}}" target="new">
+		<img class="full_img" ng-src="../Content/{{product.images[img.img]}}" />
+		</a>
+	</div>
+	<ul class="img-thumbnails clearfix">
+		<li class="thumbnail pull-left thumb_img">
+			<a href ng-click="img.setImg(0)">
+				<img class="thumb_img" ng-src="../Content/{{product.images[0]}}" />
+			</a>
+		</li>
+		<li class="thumbnail pull-left thumb_img">
+		<a href ng-click="img.setImg(1)">
+			<img class="thumb_img" ng-src="../Content/{{product.images[1]}}" />
+		</a>
+		</li>
+		<li class="thumbnail pull-left thumb_img">
+			<a href ng-click="img.setImg(2)">
+				<img class="thumb_img" ng-src="../Content/{{product.images[2]}}" />
+			</a>
+		</li>
+	</ul>
+</div>

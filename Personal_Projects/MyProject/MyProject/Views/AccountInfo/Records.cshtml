@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MyProject.Controllers.RecordBase>
+
+@{
+    ViewBag.Title = "Records";
+}
+
+<h2>Records</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WithDrawals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deposits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WithDrawals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deposits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+    </tr>
+}
+
+</table>

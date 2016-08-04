@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Mug Store";
+}
+@section scripts{
+    <script src="~/Scripts/app.js"></script>
+    <link rel="stylesheet" href="~/Content/app.css" />
+    }
+<div ng-app="store">
+<div ng-controller="StoreController as store">
+    <div class="big-cont">
+        <div class="empty-cont"></div>
+        <!-- Title div -->
+        <div class="title-cont">
+            <div class="title-cont-inner" style="width:130px; background-color: black; margin-left:30%; margin-top:40%;">
+                <h1 style="color:gray;">Welcome to the <b style="color:white;">Mug Shop!</b></h1>
+            </div>
+        </div>
+
+        <!-- Content div -->
+        <div class="content-cont">
+            <div class="list-group">
+                <div class="list-group-item" ng-repeat="product in store.products">
+
+                    <!-- Title div -->
+                    <product-title></product-title>
+
+                    <!-- Gallery div -->
+                    <product-gallery></product-gallery>
+
+                    <!-- Menu div -->
+                    <product-menus></product-menus>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<div></div>

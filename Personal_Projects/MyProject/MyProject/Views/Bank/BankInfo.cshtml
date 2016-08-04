@@ -1,0 +1,26 @@
+﻿@model MyProject.Controllers.CustomerWithDetails
+
+@{
+    ViewBag.Title = "BankInfo";
+}
+
+<h2>Welcom! @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h2>
+
+<div>
+    <hr />
+    <div>
+        <h4>What can I help you today?</h4>
+        <div>
+            @Html.ActionLink("My Information", "BankCustomer", new { id = Model.Id })
+        </div>
+        <div>
+            @Html.ActionLink("My Cards", "BankCard", new { id = Model.Id })
+        </div>
+        <div>
+            @Html.ActionLink("My Accounts", "BankAccount", new { id = Model.Id })
+        </div>
+        <div>
+            <br />@Html.ActionLink("Back to Search", "Index", "Bank")
+        </div>
+    </div>  
+</div>
