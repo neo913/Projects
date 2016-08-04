@@ -214,6 +214,9 @@ a.setH{
 .previews{
     width:100%;
 }
+.previews_thumbs{
+    width:30%;
+}
 
 /* Contact page */
 .modal-content{

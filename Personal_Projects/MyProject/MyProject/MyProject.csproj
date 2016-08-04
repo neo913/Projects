@@ -205,6 +205,12 @@
     <Content Include="Content\bootstrap.min.js" />
     <Content Include="Content\carousel.js" />
     <Content Include="Content\images\A8cd.jpg" />
+    <Content Include="Content\images\bank1.jpg" />
+    <Content Include="Content\images\bank2.jpg" />
+    <Content Include="Content\images\bank3.jpg" />
+    <Content Include="Content\images\bank4.jpg" />
+    <Content Include="Content\images\bank5.jpg" />
+    <Content Include="Content\images\bank6.jpg" />
     <Content Include="CSS\style.css" />
     <Content Include="Content\images\about.png" />
     <Content Include="Content\images\asp.jpg" />
