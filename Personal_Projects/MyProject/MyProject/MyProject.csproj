@@ -204,6 +204,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.min.js" />
     <Content Include="Content\carousel.js" />
+    <Content Include="Content\css\game_2048.css" />
     <Content Include="Content\images\A8cd.jpg" />
     <Content Include="Content\images\bank1.jpg" />
     <Content Include="Content\images\bank2.jpg" />
@@ -211,6 +212,7 @@
     <Content Include="Content\images\bank4.jpg" />
     <Content Include="Content\images\bank5.jpg" />
     <Content Include="Content\images\bank6.jpg" />
+    <Content Include="Content\js\game_2048.js" />
     <Content Include="CSS\style.css" />
     <Content Include="Content\images\about.png" />
     <Content Include="Content\images\asp.jpg" />
@@ -347,10 +349,10 @@
     <Content Include="Views\Portfolio\Work.cshtml" />
     <Content Include="products.json" />
     <Content Include="Scripts\products.json" />
+    <Content Include="Views\Portfolio\Game_2048.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\" />
     <Folder Include="Views\Errors\" />
   </ItemGroup>
   <ItemGroup>

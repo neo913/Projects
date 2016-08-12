@@ -24,6 +24,10 @@ namespace MyProject.Controllers
         {
             return View();
         }
+        public ActionResult Game_2048()
+        {
+            return View();
+        }
         // GET: Portfolio/Details/5
         public ActionResult Details(int id)
         {
