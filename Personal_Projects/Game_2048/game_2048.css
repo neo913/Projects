@@ -1,0 +1,87 @@
+body{
+	font-family: 'Lato', sans-serif;
+	position: absolute;
+	width: 320px;
+	background-color: #FBFBEC;
+}
+.title{
+	position: relative;
+	float: left;
+	width: 30%;
+	padding: 2%;
+	margin: 3% 5%;
+	font-size: 2.6em;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #F7F789;
+}
+.score-bar{
+	position: relative;
+	float: left;
+	width: 55%;
+	margin: 5% 0% 5%;
+}
+.score{
+	position: relative;
+	float: left;
+	margin: 4% 5% 4%;
+	width: 35%;
+	border-radius: 5px;
+	padding: 2%;
+	text-align: center;
+	background-color: #D7D7D2;
+}
+.score-sm{
+	padding-top: 5%;
+	font-size: 1em;
+	background-color: #FAFAFA;
+	width:95%;
+	margin: auto;
+}
+.newgame-bar{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.join-text{
+	width:55%;
+	margin-left: 2%;
+	float: left;
+}
+.newgame{
+	background-color: #A0A090;
+	float: right;
+	width: 35%;
+	margin-right: 2%;
+	padding: 2%;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1.1em;
+	color: #FAFAFA;
+}
+
+#container{
+	position: relative;
+	float: left;
+	width: 96%;
+	margin: 2%;
+}
+.base_16{
+	position: relative;
+	float: left;
+	width: 100%;
+	background-color: #6F6F5E;
+	border-radius: 5px;
+}
+.base_16 .sm{
+	position: relative;
+	float: left;
+	width: 23%;
+	min-height: 34px;
+	padding: 6% 0% 6%;
+	margin: 1%;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 5px;
+	background-color: #F9FFA9;
+}
