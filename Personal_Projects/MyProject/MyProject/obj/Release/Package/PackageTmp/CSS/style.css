@@ -1,0 +1,464 @@
+/* Edword Yun Portfolio*/
+html {
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+header {
+    position: absolute;
+}
+
+header div.navbar-header {
+    position: fixed;
+    margin: 5em;
+    z-index: 500;
+}
+/* nav */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    width: 80px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background-color: transparent !important;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: -5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    margin-left:-20px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#mainPage {
+    overflow: hidden;
+}
+#mainPage #mainSlide {
+    background: #fff;
+    opacity: 0.8;
+}
+
+#mainPage #mainSlide img{
+    width: 100%;
+}
+
+#mainPage #mainSlide .carousel-control {
+    position: fixed;
+}
+/*
+#mainPage #mainSlide .carousel-caption {
+    position: fixed;
+    top:25%;
+    margin: auto;
+}
+
+#mainPage #mainSlide .carousel-caption h3{
+    position:fixed;
+    font-size: 4em;
+    text-align: center;
+    text-shadow: #222 5px 5px 7px;
+    text-transform: uppercase;
+}
+*/
+#mainPage #mainSlide .cap-custom {
+    position: fixed;
+    top: 0px;
+  }
+  .cap-custom h3 {
+    font-size: 4em;
+    position: absolute;
+    width: 120%;
+    margin-left:-10%;
+    top: 30%;
+    margin-bottom: auto;
+    text-shadow: #222 5px 5px 7px;
+    text-transform: uppercase;
+}
+  #mainPage #mainSlide .carousel-control {
+    position: fixed;
+  }
+
+#product {
+    top: 65%;
+    position: fixed;
+    left: 10%;
+    right: 10%;
+}
+#product a{
+    color: black;
+    text-decoration: none;
+}
+
+
+div#product div {
+    height: 13em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.innerBox {
+    margin: 1em;
+    background: rgba(255, 255, 255, 0.80);
+    padding: 2em;
+    box-shadow: #333 2px 2px 14px;
+    border-radius: 1em;
+}
+
+.fixed-icon{
+    position: fixed;
+}
+
+/* About page */
+#aboutMain {
+    position: relative;
+    margin: auto;
+    padding-top: 5em;
+    width: 70%;
+    overflow: auto;
+}
+
+.min-hei {
+    min-height: 500px;
+}
+
+.about-md-cont {
+    position: relative;
+    margin: 1em auto;
+    width: 90%;
+}
+.pull-up {
+    margin-bottom: 30px;
+}
+.pull-down {
+    margin-bottom: -20px;
+}
+.about-sm-cont {
+    position: relative;
+    margin: 5%;
+    padding: 1em;
+    width: auto;
+}
+.aboutBg {
+    background-image: url('../Content/images/slider3.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: left top;
+    background-attachment: fixed;
+}
+.dateShow{
+    font-size: 14px;
+}
+
+/* Work page */
+.workBg {
+    position: fixed;
+    width: 100%;
+    opacity: 0.8;
+    overflow: hidden;
+}
+#workMain {
+    position: relative;
+    text-align: center;
+    padding-top: 5em;
+    margin: auto;
+    width: 70%;
+    overflow: hidden;
+}
+.work-cont{
+    width:100%;
+}
+.work-title{
+    width:60%;
+    margin: auto;
+}
+.work-md {
+    width:80%;
+    margin: auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.work-sm {
+    margin:2em;
+    color: white;
+    text-shadow: 1px 1px black;
+    background: gray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #FAFAFA, gray); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #FAFAFA, gray); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #FAFAFA, gray); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #FAFAFA, gray); /* Standard syntax (must be last) */
+}
+.item{
+    font-size: 1.5em;
+}
+a.setH{
+    text-decoration: unset !important;
+}
+.previews{
+    width:100%;
+}
+.previews_thumbs{
+    width:30%;
+}
+
+/* Contact page */
+.modal-content{
+    min-height: 470px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right:auto;
+}
+.text-area {
+    position: relative;
+    max-width: unset;
+}
+.contactBg {
+    position: fixed;
+    width: 100%;
+    opacity: 0.8;
+    overflow: hidden;
+}
+.contact-title{
+    margin: 1em;
+    background: rgba(255, 255, 255, 0.80);
+    padding: 1em;
+    box-shadow: #333 2px 2px 14px;
+    border-radius: 0.5em;
+    text-align: center;
+}
+.contact-btn{
+    margin: auto;
+    text-align: center;
+    padding-top:1em;
+}
+.contact-btn input, .contact-btn img{
+    box-shadow: #333 2px 2px 14px;
+    border-radius: 0.5em;
+    margin: 0 5px 0 5px;
+}
+.social{
+
+}
+.icons {
+    height: 34px;
+}
+/*
+Special
+*/
+.left-1em{
+    margin-left: 1em;
+}
+.myName{
+    FONT-WEIGHT: 700; text-transform: uppercase
+}
+#ang-nav.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #333 !important;
+    background-color: transparent !important;
+}
+#ang-nav.nav > li > a {
+    color:#333;
+    text-shadow: 0 0 10px #fff;
+    font-weight: 600;
+}
+#ang-nav.nav > li > a:hover{
+  text-decoration: none;
+  background-color: transparent !important;
+  color: #333 !important;
+  text-shadow: 0 0 2px #ccc;
+  font-weight: 600;
+  box-shadow: #333 1px 1px 10px;
+}
+#ang-nav.nav > li > a:focus {
+    color: #222;
+    text-shadow: 0 0 10px #ccc;
+    font-weight: 700;
+}
+#ang-nav.nav-pills > li.active > a{
+    color:#fff;
+    background-color: #fff !important;
+    box-shadow: #333 1px 1px 10px;
+    opacity: 0.8;
+}
+.setH:hover{
+    cursor:pointer;
+}
+.pad-helper{
+    top:20px;
+}
+h2.modal-title.contact-title {
+    margin: 1em;
+}
+.text-box {
+}
+.modal-dialog {
+    width: unset;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    html {
+        overflow: auto;
+    }
+
+    header div.navbar-header {
+        position: fixed;
+        margin: 0em;
+        z-index: 500;
+    }
+
+    #mainPage #mainSlide .carousel-control {
+        position: absolute;
+    }
+    .cap-custom {
+        position: absolute;
+        top: 0px;
+    }
+    .cap-custom h3 {
+        font-size: 2em;
+        position: absolute;
+        top:50%;
+        margin-top: -2%;
+    }
+
+    #product {
+        top: auto;
+        position: initial;
+        left: 10%;
+        right: 10%;
+    }
+
+    .modal-content{
+        min-height: 540px;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    .work-title{
+        margin-top: 35px;
+    }
+    .work-title h1{
+        font-size:20px;
+    }
+}
+@media screen and (max-width: 600px){
+    h1.myName{
+        font-size: 2em;
+        text-align: center;
+        text-shadow: #FAFAFA 1px 1px 4px;
+        padding-top: 10px;
+    }   
+    #aboutMain, #workMain{
+        width: 100%;
+    }
+    #aboutMain.innerBox,
+    #workMain.innerBox{
+        position: fixed;
+        padding: 1em;
+    }
+    .contactBg{
+        border-radius: 1em;
+    }
+    .remove_bg{
+        font-size:0.8em;
+    }
+    .about-md-cont {
+        margin: 0em auto;
+        width: 100%;
+    }
+    header div.navbar-header {
+    position: fixed;
+}
+    .pull-down {
+    margin-bottom: 0px;
+}
+    .fix1{
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    .fix2{
+        padding: 1em !important;
+    }
+    .fix3{
+        width: 250px;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 80px;
+    }
+    .fix4{
+        padding:10px 10px !important;
+    }
+    .fix5{
+        margin-bottom: 20px;
+    }
+    .nav > li > a:hover {
+        text-shadow: #FAFAFA 1px 1px 4px;
+    }
+    .nav > li > a:focus {
+        text-shadow: #FAFAFA 1px 1px 4px;
+    }
+    h2.modal-title.contact-title{
+        margin:0.6em;
+    }
+    h2.modal-title.contact-title h2,
+    h2.modal-title.contact-title {
+        font-size: 20px !important;
+    }
+    .modal-body{
+        padding:0px;
+    }
+    .work-title{
+        margin-top: 35px;
+    }
+    .work-title h1{
+        font-size:20px;
+    }
+    .innerBox.work-title,
+    .innerBox.work-md,
+    .innerBox.work-sm{
+        padding: 1em !important;
+    }
+    #ang-nav{
+        padding-bottom: 20%;
+    }
+}
+@media screen and (max-width: 450px){
+    h1.myName{
+        font-size: 1.4em;
+    }
+    .remove_bg{
+        font-size:0.6em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .cap-custom h3{
+        font-size: 1em !important;
+    }
+    .modal-content{
+        min-height: 555px;
+    }
+}
+.game_2048_preview{
+    width:40%;
+}

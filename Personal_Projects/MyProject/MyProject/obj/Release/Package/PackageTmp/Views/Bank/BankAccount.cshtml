@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MyProject.Controllers.AccountWithDetails>
+
+@{
+    ViewBag.Title = "BankAccount";
+}
+
+<h2>Your Account Information</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OverDraftLimit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordsCount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AvailableBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OverDraftLimit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecordsCount)
+        </td>
+        <td>
+            @Html.ActionLink("Records", "Records", new { id = item.Id })
+        </td>
+    </tr>
+}
+</table>
+<div class="col-md-5"></div>
+<div class="col-md-4">
+    <input type="button" onclick="javascript:history.back()" value="Go back to Menu" class="btn btn-primary">
+</div>
+<div class="col-md-3"></div><br />

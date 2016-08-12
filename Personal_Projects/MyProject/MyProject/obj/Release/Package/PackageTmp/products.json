@@ -1,0 +1,62 @@
+[
+  {
+    "name": "C# Mug",
+    "price": 4.99,
+    "images": [
+      "images/001.jpg",
+      "images/002.jpg",
+      "images/003.jpg"
+    ],
+    "description": "Java Programmers Wear Glasses. Because they don't C#",
+    "details": [
+      "Product Dimensions: 10.2 x 7.6 x 9.5 cm",
+      "Shipping Weight: 9 g",
+      "Item model number: mug_150108_3",
+      "ASIN: B00DV48XTM"
+    ],
+    "reviews": [
+      {
+        "stars": 5,
+        "body": "This mug cup makes me smile every morning :)",
+        "author": "SeeSharp@code.com"
+      },
+      {
+        "stars": 2,
+        "body": "I don't understand what this means. It's just a cup",
+        "author": "Zava@code.com"
+      }
+    ]
+  },
+  {
+    "name": "Code Travel Mug",
+    "price": 7.99,
+    "images": [
+      "images/101.jpg",
+      "images/102.jpg",
+      "images/103.jpg"
+    ],
+    "description": "I'm not a programmer, I just write code.",
+    "details": [
+      "Manufacturer reference: NEWMUG2015ME7003",
+      "ASIN: B0175UAB3I"
+    ],
+    "reviews": [ ]
+  },
+  {
+    "name": "Cuz I Write Code",
+    "price": 4.99,
+    "images": [
+      "images/201.jpg",
+      "images/202.jpg",
+      "images/203.jpg"
+    ],
+    "description": "Chics Dig Me Cuz I Write Code.",
+    "details": [
+      "Product Dimensions: 10.2 x 7.6 x 9.5 cm",
+      "Shipping Weight: 9 g",
+      "Item model number: mug_150108_3",
+      "ASIN: B00DV48XTM"
+    ],
+    "reviews": [ ]
+  }
+]

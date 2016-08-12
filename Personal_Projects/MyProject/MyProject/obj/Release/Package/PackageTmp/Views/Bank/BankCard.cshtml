@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MyProject.Controllers.CardWithDetails>
+
+@{
+    ViewBag.Title = "BankCard";
+}
+
+<h2>Your Card Information</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Numbers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValidFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GoodThru)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CVV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cardholder)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numbers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValidFrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GoodThru)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CVV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cardholder)
+        </td>
+    </tr>
+}
+</table>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+    <input type="button" onclick="javascript:history.back()" value="Go back to Menu" class="btn btn-primary">
+</div>
+<div class="col-md-4"></div><br/>

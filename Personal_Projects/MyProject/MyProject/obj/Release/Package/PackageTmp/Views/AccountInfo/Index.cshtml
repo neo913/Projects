@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MyProject.Controllers.AccountWithDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Account List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OverDraftLimit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordsCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AvailableBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OverDraftLimit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.FirstName) @Html.DisplayFor(modelItem => item.Customer.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecordsCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Transaction", "Transaction", new { id = item.Id })</li>
+                        <li>@Html.ActionLink("Edit", "Edit", new { id = item.Id })</li>
+                        <li>@Html.ActionLink("Details", "Details",new { id = item.Id })</li>
+                        <li>@Html.ActionLink("Records", "Records", new { id = item.Id })</li>
+                    </ul>
+                </li>
+            </ul>
+        </td>
+    </tr>
+}
+
+</table>

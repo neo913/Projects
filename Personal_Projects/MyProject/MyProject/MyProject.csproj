@@ -212,6 +212,8 @@
     <Content Include="Content\images\bank4.jpg" />
     <Content Include="Content\images\bank5.jpg" />
     <Content Include="Content\images\bank6.jpg" />
+    <Content Include="Content\images\game_2048_1.jpg" />
+    <Content Include="Content\images\game_2048_2.jpg" />
     <Content Include="Content\js\game_2048.js" />
     <Content Include="CSS\style.css" />
     <Content Include="Content\images\about.png" />

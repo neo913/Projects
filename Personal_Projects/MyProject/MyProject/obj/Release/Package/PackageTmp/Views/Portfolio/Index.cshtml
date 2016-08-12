@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "About me";
+    ViewBag.Message = "Hello I'm Edward";
+}
+<script src="../Content/JavaScript/about.js"></script>
+
+<div ng-app="about" class="aboutBg">
+    <img class="contactBg" src="../Content/Images/slider1.jpg" alt="Background image">
+    <div class="site-inner" id="mainPage" ng-controller="AboutController as aboutCtrl">
+        <header>
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="../" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="../Content/Images/logo_text.png" style="width: 80px;" />
+                        </a>
+                        <ul class="dropdown-content fix3">
+                            <li class="dropdown">
+                                <a href="../">
+                                    <img src="../Content/Images/home.png" style="width:80px;">
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../../Portfolio">
+                                    <img src="../Content/Images/about.png" style="width:80px;">
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="../../Portfolio/Work">
+                                    <img src="../Content/Images/work.png" style="width:80px;">
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="setH" data-toggle="modal" data-target="#contact-modal">
+                                    <img src="../Content/Images/contact.png" style="width:80px;">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </div>
+        </header>
+        
+
+        <div>
+            <div id="aboutMain">
+                <section ng-controller="TabController as tabCtrl">
+                    <ul id="ang-nav" class="nav nav-pills left-1em">
+                        <h1 class="myName">Insu (Edward) Yun</h1>
+                        <li class="remove_bg" ng-class="{active: tabCtrl.isSet(1)}">
+                            <a class="fix4" href ng-click="tabCtrl.setTab(1)">PROFILE</a>
+                        </li>
+                        <li class="remove_bg" ng-class="{active: tabCtrl.isSet(2)}">
+                            <a class="fix4" href ng-click="tabCtrl.setTab(2)">SKILLS</a>
+                        </li>
+                        <li class="remove_bg" ng-class="{active: tabCtrl.isSet(3)}">
+                            <a class="fix4" href ng-click="tabCtrl.setTab(3)">ACADEMIC</a>
+                        </li>
+                        <li class="remove_bg" ng-class="{active: tabCtrl.isSet(4)}">
+                            <a class="fix4" href ng-click="tabCtrl.setTab(4)">EXPERIENCES</a>
+                        </li>
+                    </ul>
+
+                    <!-- Profile -->
+                    <div class="innerBox min-hei fix2" ng-show="tabCtrl.isSet(1)">
+                        <div class="about-md-cont" ng-repeat="first in aboutCtrl.first">
+                            <h3 class="pull-up">{{first.name}}</h3>
+                            <ul class="innerBox">
+                                <li ng-repeat="list in first.list">
+                                    {{list}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="innerBox" ng-show="tabCtrl.isSet(2)">
+                        <div class="about-md-cont">
+                            <h3 class="pull-down">TECHNICAL SKILLS</h3>
+                            <div ng-repeat="second in aboutCtrl.second">
+                                
+                                <div class="about-sm-cont innerBox">
+                                    <div>
+                                        <strong>{{second.name}}</strong>
+                                    </div>
+                                    <ul>
+                                        <li ng-repeat="list in second.list">
+                                            {{list}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic -->
+                    <div class="innerBox" ng-show="tabCtrl.isSet(3)">
+                        <div class="about-md-cont">
+                            <h3 class="pull-up">EDUCATION</h3>
+                            <div class="about-md-cont innerBox fix1" ng-repeat="education in aboutCtrl.education">
+                                <h4>{{education.name}}<em class="pull-right dateShow">{{education.year}}</em></h4>
+                                {{education.details}}
+                            </div><br />
+
+                            <h3 class="pull-up">ACADEMIC PROJECTS</h3>
+                            <div class="about-md-cont innerBox fix1" ng-repeat="academic in aboutCtrl.academic">
+                                <h4>{{academic.name}}</h4><br />
+                                <em>{{academic.environment}}</em>
+                                <ul>
+                                    <li ng-repeat="details in academic.details">
+                                        {{details}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiences -->
+                    <div class="innerBox" ng-show="tabCtrl.isSet(4)">
+                        <div class="about-md-cont">
+                            <h3 class="pull-up">EXPERIENCE</h3>
+                            <div class="about-md-cont innerBox fix1" ng-repeat="experience in aboutCtrl.experience">
+                                <h4>{{experience.name}}<em class="pull-right dateShow">{{experience.period}}</em></h4>
+                                <strong>{{experience.company}}</strong>
+                                <ul>
+                                    <li ng-repeat="details in experience.details">{{details}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <!-- Contact Modal -->
+        <div id="contact-modal" class="modal fade contact-cont" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Contact Modal -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title contact-title"> Contact Me!</h2>
+                    </div>
+
+                    <div class="modal-body pad-helper">
+                        <form id="contactForm" action="MAILTO:nedinsuyun@gmail.com" method="post" enctype="text/plain">
+                            <div class="col-md-12">
+                                <div class="form-group col-md-5">
+                                    <label class="control-label col-md-3">Name: </label>
+                                    <div class="col-md-9">
+                                        <input class="form-control col-md-8" type="text" name="name" placeholder="Your name">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-7">
+                                    <label class="control-label col-md-3">Email: </label>
+                                    <div class="col-md-9">
+                                        <input class="form-control col-md-9" type="text" name="email" placeholder="Your email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="control-label col-md-4">Content: </label>
+                                <div class="col-md-12">
+                                    <textarea class="form-control col-md-12 text-area" name="content"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="contact-btn col-md-12">
+                                <input class="btn btn-default social" type="submit" value="Send">
+                                <a href="https://ca.linkedin.com/in/nedinsuyun" target="_blank">
+                                    <img class="social icons" src="../Content/Images/linkedin.png" alt="linkedin icon" />
+                                </a>
+                                <a href="https://facebook.com/nedinsuyun" target="_blank">
+                                    <img class="social icons" src="../Content/Images/facebook.png" alt="linkedin icon" />
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Contact Modal -->
+    </div>
+</div>

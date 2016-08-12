@@ -1,0 +1,49 @@
+footer{
+    bottom: 5%;
+    position: fixed;
+}
+.title-cont{
+	width:33%;
+	float:left;
+	position:fixed;
+}
+.title-cont-inner{
+	width:130px;
+	background-color: black;
+	margin-left:30%;
+	margin-top:40%;
+}
+.content-cont{
+	width:60%;
+	float:left;
+	margin-left:33%;
+}
+.item-title-cont{
+	height:100px;
+}
+.item-gallery-cont{
+	text-align: center;	
+}
+.item-menu-cont{
+
+}
+img{
+	border: solid gray 2px;
+}
+.full_img{
+	width:300px;
+	height:300px;
+}
+.thumb_img{
+	width:120px;
+	height:120px;
+}
+.store_thumbs{
+	float:left;
+}
+.ng-invalid.ng-dirty{	/*Red border for invalid*/
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty{		/*Green border for valid*/
+	border-color: #78FA89;
+}
