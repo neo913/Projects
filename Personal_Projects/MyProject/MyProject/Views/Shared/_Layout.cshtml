@@ -26,6 +26,41 @@
 
 </head>
 <body>
+    <!--
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("My Project", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About Me", "Index", "Portfolio")</li>
+                    <li>@Html.ActionLink("Mug Store", "Store", "Portfolio")</li>
+                    <li>@Html.ActionLink("Bank System", "Index", "Bank")</li>
+
+                    @using System.Security.Claims;
+                    @if ((User as ClaimsPrincipal).HasClaim(ClaimTypes.Role, "Admin")) {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage data <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Load Data", "Load", "Data")</li>
+                                <li>@Html.ActionLink("Remove Data", "Remove", "Data")</li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+        -->
+
     @RenderBody()
     @RenderSection("scripts", required: false)
     @RenderSection("head", required: false)

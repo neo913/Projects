@@ -10,7 +10,7 @@ header {
 }
 
 header div.navbar-header {
-    position: fixed;
+    position: absolute;
     margin: 5em;
     z-index: 500;
 }
@@ -48,6 +48,8 @@ header div.navbar-header {
 
 #mainPage {
     overflow: hidden;
+    width: 80%;
+    margin: auto;
 }
 #mainPage #mainSlide {
     background: #fff;
